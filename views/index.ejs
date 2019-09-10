@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Borg</title>
+  </head>
+  <body>
+  You have been assimilated.
+
+    <ul class="quotes">
+    <% for(var i=0; i<quotes.length; i++) {%>
+      <li class="quote">
+        <span><%= quotes[i].name %></span>
+        <span><%= quotes[i].quote %></span>
+      </li>
+    <% } %>
+    </ul>
+
+    <form action="/quotes" method="POST">
+      <input type="text" placeholder="name" name="name">
+      <input type="text" placeholder="quote" name="quote">
+      <button type="submit">Submit</button>
+    </form>
+
+    <div>
+      <h2>Replace last quote written by Tuvok with Seven of Nine</h2>
+      <button id="update"> Assimilate!</button>
+    </div>
+
+    <div>
+      <h2>Delete Seven of Nine's first quote </h2>
+      <button id="delete"> Delete first Seven of Nine quote</button>
+    </div>
+
+      <script src="main.js"></script>
+
+  </body>
+  </html>
